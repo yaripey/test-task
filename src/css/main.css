@@ -12,6 +12,10 @@ body {
   background-color: #f5f4f8;
 }
 
+a {
+  color: #3f197d;
+}
+
 .container {
   padding: 10px;
 }
