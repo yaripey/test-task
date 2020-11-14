@@ -1,0 +1,19 @@
+$primary-color: #3f197d;
+$secondary-color: #f5f4f8;
+$green: #00d99c;
+$red: #e7004a;
+$mobile: 800px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

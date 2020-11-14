@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test task</title>
+  <link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logged-text">Logged out</div>
+    <div class="panel">
+      <a href="#" class="logo">
+        <img src="src/img/logo.png" alt="">
+      </a>
+      <div class="buttons">
+        <a href="#" class="home">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="#" class="new">
+          <i class="fas fa-pencil-alt"></i>
+        </a>
+        <a href="#" class="notifications">
+          <i class="far fa-bell"></i>
+          <div class="notify-count">3</div>
+        </a>
+        <a href="#" class="profile">
+          <img src="src/img/profile.png" alt="">
+        </a>
+        <a href="#" class="login">
+          <i class="far fa-user-circle"></i>
+          <div>Login</div>
+        </a>
+        <a href="#" class="burger">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <button onClick="toggle()" class="test">Toggle</button>
+    <p class="test-text">This button toggles "logged" classname on the .panel element to showcase changes.</p>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/a00dd64918.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  let logged = false;
+  const toggle = () => {
+    const sign = document.getElementsByClassName('logged-text')[0]
+    if (logged === false) {
+      sign.innerText = "Logged in"
+    } else {
+      sign.innerText = "Logged out"
+    }
+    logged = !logged
+
+    const panel = document.getElementsByClassName('panel')[0]
+    panel.classList.toggle('logged')
+  }
+</script>
+
+</html>

@@ -1,0 +1,176 @@
+$primary-color: #3f197d;
+$secondary-color: #f5f4f8;
+$green: #00d99c;
+$red: #e7004a;
+$mobile: 800px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+body {
+  color: $primary-color;
+  background-color: $secondary-color;
+}
+
+.container {
+  padding: 10px;
+}
+
+.logged-text {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.panel {
+  border-radius: 2px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px;
+
+  .login {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin: 5px;
+      font-size: 15px;
+    }
+
+    div {
+      font-size: 11px;
+    }
+  }
+
+  .new, .notifications, .profile {
+    display: none;
+  }
+
+  &.logged {
+    .login {
+      display: none;
+    }
+
+    .new, .notifications, .profile {
+      display: block;
+    }
+  }
+
+  @include mobile {
+    height: 45px;
+
+    padding: 0 10px 0 10px;
+
+    .logo, .logo img {
+      height: 40px;
+    }
+
+    .home, .new, .notifications {
+      display: none;
+    }
+
+    .login, .profile {
+      height: 25px;
+      width: 25px;
+    }
+    
+    .login {
+      div {
+        display: none;
+      }
+    }
+
+    &.logged {
+      .home, .new, .notifications {
+        display: none;
+      }
+      .login, .profile, .profile img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  a {
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px;
+    font-size: 13px;
+  }
+
+  .home, .notifications, .new, .profile { 
+    width: 30px;
+    height: 30px;
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  .new {
+    background-color: $green;
+    color: white;
+  }
+
+  .burger {
+    font-size: 15px;
+    margin: 10px;
+    color: $primary-color;
+  }
+
+  .notify-count {
+    position: relative;
+    right: -21px;
+    top: -34px;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    line-height: 13px;
+    background-color: $red;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+  }
+}
+
+.test {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: $primary-color;
+  background: $secondary-color;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+    background: $primary-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.test-text {
+  font-size: 11px;
+}

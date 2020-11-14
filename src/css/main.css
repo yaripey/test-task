@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body {
+  color: #3f197d;
+  background-color: #f5f4f8;
+}
+
+.container {
+  padding: 10px;
+}
+
+.logged-text {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.panel {
+  border-radius: 2px;
+  height: 70px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px 0 30px;
+}
+
+.panel .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel .login i {
+  margin: 5px;
+  font-size: 15px;
+}
+
+.panel .login div {
+  font-size: 11px;
+}
+
+.panel .new, .panel .notifications, .panel .profile {
+  display: none;
+}
+
+.panel.logged .login {
+  display: none;
+}
+
+.panel.logged .new, .panel.logged .notifications, .panel.logged .profile {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .panel {
+    height: 45px;
+    padding: 0 10px 0 10px;
+  }
+  .panel .logo, .panel .logo img {
+    height: 40px;
+  }
+  .panel .home, .panel .new, .panel .notifications {
+    display: none;
+  }
+  .panel .login, .panel .profile {
+    height: 25px;
+    width: 25px;
+  }
+  .panel .login div {
+    display: none;
+  }
+  .panel.logged .home, .panel.logged .new, .panel.logged .notifications {
+    display: none;
+  }
+  .panel.logged .login, .panel.logged .profile, .panel.logged .profile img {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons a {
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  margin: 5px;
+  font-size: 13px;
+}
+
+.buttons .home, .buttons .notifications, .buttons .new, .buttons .profile {
+  width: 30px;
+  height: 30px;
+  background-color: #f5f4f8;
+  color: #3f197d;
+}
+
+.buttons .new {
+  background-color: #00d99c;
+  color: white;
+}
+
+.buttons .burger {
+  font-size: 15px;
+  margin: 10px;
+  color: #3f197d;
+}
+
+.buttons .notify-count {
+  position: relative;
+  right: -21px;
+  top: -34px;
+  width: 13px;
+  height: 13px;
+  text-align: center;
+  line-height: 13px;
+  background-color: #e7004a;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.test {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #3f197d;
+  background: #f5f4f8;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.test:hover {
+  color: #f5f4f8;
+  background: #3f197d;
+}
+
+.test:focus {
+  outline: none;
+}
+
+.test-text {
+  font-size: 11px;
+}
+/*# sourceMappingURL=main.css.map */
