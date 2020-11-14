@@ -1,4 +1,4 @@
 # test-task
 Test task for a job application.
 
-You can try it out [here](artemtrubin.ho.ua/test-task)
+You can try it out [here](http://artemtrubin.ho.ua/test-task)
